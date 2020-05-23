@@ -709,6 +709,20 @@ const HTML = {
       </div>
     `,
   },
+  embeddedIframes: {
+    before: `
+      <div>
+        <iframe></iframe>
+        <iframe></iframe>
+      </div>
+    `,
+    after: `
+      <div>
+        <div class="unread-iframe-container"><iframe></iframe></div>
+        <div class="unread-iframe-container"><iframe></iframe></div>
+      </div>
+    `,
+  },
 };
 
 export default HTML;

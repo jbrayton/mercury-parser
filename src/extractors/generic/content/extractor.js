@@ -1,6 +1,6 @@
 import cheerio from 'cheerio';
 
-import { nodeIsSufficient } from 'utils/dom';
+import { nodeIsSufficient, prepareForUnread } from 'utils/dom';
 import { cleanContent } from 'cleaners';
 import { normalizeSpaces } from 'utils/text';
 
@@ -79,7 +79,7 @@ const GenericContentExtractor = {
     if (!node) {
       return null;
     }
-
+    prepareForUnread(node, $);
     return normalizeSpaces($.html(node));
   },
 };
