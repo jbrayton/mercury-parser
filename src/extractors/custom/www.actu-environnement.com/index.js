@@ -18,11 +18,15 @@ export const WwwActuenvironnementComExtractor = {
   },
 
   content: {
+    defaultCleaner: false,
     selectors: [['#SchemaOrgNewsArticle']],
 
     // Is there anything in the content you selected that needs transformed
     // before it's consumable content? E.g., unusual lazy loaded images
-    transforms: {},
+    transforms: {
+      '*[itemprop="image"]': 'figure',
+      '*[itemprop="image"] .copyright-legend': 'figcaption',
+    },
 
     // Is there anything that is in the result that shouldn't be?
     // The clean selectors will remove anything that matches from
@@ -32,6 +36,12 @@ export const WwwActuenvironnementComExtractor = {
       '.infobulle_news',
       '.copyright_actuenvironnement',
       '.infobulle',
+      '#toolbar_informations',
+      '*[itemprop="image"] .copyright-legend a',
+      '.toolbar',
+      '.video_theme',
+      '.print_date',
+      '.encart_citation_right',
     ],
   },
 };
