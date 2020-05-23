@@ -1,5 +1,5 @@
 import Cleaners from 'cleaners';
-import { convertNodeTo, makeLinksAbsolute } from 'utils/dom';
+import { convertNodeTo, makeLinksAbsolute, prepareForUnread } from 'utils/dom';
 import GenericExtractor from './generic';
 
 // Remove elements by an array of selectors
@@ -103,6 +103,7 @@ export function select(opts) {
     makeLinksAbsolute($node, $, opts.url || '');
     cleanBySelectors($node, $, extractionOpts);
     transformElements($node, $, extractionOpts);
+    prepareForUnread($node, $);
     return $node;
   }
 

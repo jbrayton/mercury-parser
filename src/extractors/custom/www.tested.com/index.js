@@ -21,7 +21,7 @@ export const WwwTestedComExtractor = {
           'data-video-id'
         );
         $node.replaceWith(
-          `<div class="unread_youtube_content"><iframe type="text/html" src="https://www.youtube.com/embed/${videoElement}" frameborder="0" width="854" height="480" allowfullscreen></iframe></div>`
+          `<iframe type="text/html" src="https://www.youtube.com/embed/${videoElement}" frameborder="0" width="854" height="480" allowfullscreen></iframe>`
         );
       },
       'span.author': 'p',
