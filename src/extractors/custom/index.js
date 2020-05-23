@@ -160,3 +160,4 @@ export * from './www.giantbomb.com';
 export * from './www.tested.com';
 export * from './www.zdf.de';
 export * from './www.actu-environnement.com';
+export * from './consomac.fr';
