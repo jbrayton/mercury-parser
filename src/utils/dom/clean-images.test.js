@@ -13,13 +13,6 @@ describe('cleanImages($)', () => {
     assertClean(result.html(), HTML.cleanSmallImages.after);
   });
 
-  it('removes height attribute from images that remain', () => {
-    const $ = cheerio.load(HTML.cleanHeight.before);
-
-    const result = cleanImages($('*').first(), $);
-    assertClean(result.html(), HTML.cleanHeight.after);
-  });
-
   it('removes spacer/transparent images', () => {
     const $ = cheerio.load(HTML.cleanSpacer.before);
 

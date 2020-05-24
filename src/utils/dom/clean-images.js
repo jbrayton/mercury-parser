@@ -9,11 +9,6 @@ function cleanForHeight($img, $) {
   // which aren't very useful for reading.
   if ((height || 20) < 10 || width < 10) {
     $img.remove();
-  } else if (height) {
-    // Don't ever specify a height on images, so that we can
-    // scale with respect to width without screwing up the
-    // aspect ratio.
-    $img.removeAttr('height');
   }
 
   return $;
