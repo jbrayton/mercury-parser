@@ -161,3 +161,4 @@ export * from './www.tested.com';
 export * from './www.zdf.de';
 export * from './www.actu-environnement.com';
 export * from './consomac.fr';
+export * from './www.astronews.com';
